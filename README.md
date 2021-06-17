@@ -15,4 +15,4 @@ I expect to see only one line in the logs: “get children of 10”. This not th
 
 # Actual results
 More than thousand lines are logged in Xcode. One line for every possible child in the outline group. I expect SwiftUI to only evaluate children for visible items, just like it does it on iOS.
-Because otherwise it can drain the memory if the tree is full of memory expensive data that is loaded lazily. Or if this data is lazy loaded from the network, it will block the network if the outline tree is big.
+Because otherwise it can drain the memory if the tree is full of memory expensive data that should be lazyloaded. Or if this data is coming  from the network, it will block the network if the entire outline tree is loaded at once.
